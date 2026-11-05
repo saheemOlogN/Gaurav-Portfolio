@@ -38,6 +38,7 @@ function Typewriter() {
 
 function App() {
   const [contactOpen, setContactOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     if (!contactOpen) return undefined
@@ -47,6 +48,15 @@ function App() {
     window.addEventListener('keydown', closeOnEscape)
     return () => window.removeEventListener('keydown', closeOnEscape)
   }, [contactOpen])
+
+  useEffect(() => {
+    if (!menuOpen) return undefined
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [menuOpen])
 
   const sendWhatsAppMessage = (event) => {
     event.preventDefault()
@@ -109,14 +119,28 @@ function App() {
       >
         <nav className="glass-nav" aria-label="Main navigation">
           <a className="nav-brand" href="#home" aria-label="Gaurav home">GAURAV<span>.</span></a>
-          <div className="nav-links">
-            <a href="#about-me">About</a>
-            <a href="#clients">Clients</a>
-            <a href="#journey">Journey</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
+          <div className={`nav-links${menuOpen ? ' is-open' : ''}`} id="site-navigation">
+            <a href="#about-me" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#clients" onClick={() => setMenuOpen(false)}>Clients</a>
+            <a href="#journey" onClick={() => setMenuOpen(false)}>Journey</a>
+            <a href="#certifications" onClick={() => setMenuOpen(false)}>Certifications</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </div>
-          <button className="contact-button" type="button" onClick={() => setContactOpen(true)}>Let’s talk</button>
+          <div className="nav-actions">
+            <button
+              className={`nav-menu-toggle${menuOpen ? ' is-open' : ''}`}
+              type="button"
+              aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={menuOpen}
+              aria-controls="site-navigation"
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+            <button className="contact-button" type="button" onClick={() => { setMenuOpen(false); setContactOpen(true) }}>Let’s talk</button>
+          </div>
         </nav>
       </GlassSurface>
 

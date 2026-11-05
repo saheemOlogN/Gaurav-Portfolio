@@ -37,7 +37,16 @@ const demoTestimonials = [
 
 function ClientsSection() {
   const [selectedClient, setSelectedClient] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
   const galleryItems = clientPhotos.length > 0 ? clientPhotos : placeholderClients
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 600px)')
+    const updateMobile = () => setIsMobile(media.matches)
+    updateMobile()
+    media.addEventListener('change', updateMobile)
+    return () => media.removeEventListener('change', updateMobile)
+  }, [])
 
   const selectClient = (index, item) => {
     if (item && !item.placeholder) setSelectedClient(item)
@@ -80,9 +89,9 @@ function ClientsSection() {
         <FlexCarousel
           items={galleryItems}
           preset="liquid"
-          intro="rise"
-          cardHeight={0.5}
-          gap={12}
+          intro={isMobile ? 'fade' : 'rise'}
+          cardHeight={isMobile ? 0.58 : 0.5}
+          gap={isMobile ? 8 : 12}
           squeeze={0.2}
           focusOnClick={false}
           captions={false}

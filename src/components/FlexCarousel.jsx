@@ -695,7 +695,10 @@ const FlexCarousel = ({
     const resize = () => {
       width = Math.max(1, container.clientWidth);
       height = Math.max(1, container.clientHeight);
-      renderer.dpr = Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(PIXEL_BUDGET / (width * height)));
+      const isMobile = window.matchMedia?.('(max-width: 700px)').matches ?? false;
+      const maxDpr = isMobile ? 1.25 : 2;
+      const pixelBudget = isMobile ? 2.2e6 : PIXEL_BUDGET;
+      renderer.dpr = Math.min(window.devicePixelRatio || 1, maxDpr, Math.sqrt(pixelBudget / (width * height)));
       renderer.setSize(width, height);
       target.setSize(Math.max(2, Math.round(width * renderer.dpr)), Math.max(2, Math.round(height * renderer.dpr)));
       lensUniforms.tScene.value = target.texture;

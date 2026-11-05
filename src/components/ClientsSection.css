@@ -28,6 +28,7 @@
   width: 100%;
   height: 560px;
   margin: 0;
+  touch-action: pan-y;
 }
 
 .testimonials {
@@ -232,7 +233,7 @@
   }
 
   .clients-carousel {
-    height: 420px;
+    height: 380px;
   }
 
   .testimonials {
