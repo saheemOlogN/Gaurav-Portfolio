@@ -43,8 +43,6 @@
 .certification-viewport {
   min-width: 0;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 2%, #000 98%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 2%, #000 98%, transparent);
 }
 
 .certification-track {
@@ -61,7 +59,7 @@
 .certification-card {
   position: relative;
   display: flex;
-  flex: 0 0 clamp(220px, calc((100vw - 210px) / 3), 350px);
+  flex: 0 0 clamp(180px, calc((100vw - 224px) / 3), 331px);
   min-height: 272px;
   flex-direction: column;
   align-items: center;
@@ -123,6 +121,17 @@
   opacity: 0.55;
 }
 
+@media (min-width: 601px) and (max-width: 760px) {
+  .certification-carousel {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    gap: 10px;
+  }
+
+  .certification-card {
+    flex-basis: clamp(200px, calc((100vw - 184px) / 2), 290px);
+  }
+}
+
 @media (max-width: 600px) {
   .certifications-section {
     padding: 88px 20px 72px;
@@ -147,7 +156,7 @@
   }
 
   .certification-card {
-    flex-basis: min(78vw, 330px);
+    flex-basis: calc(100vw - 128px);
     min-height: 240px;
     padding: 28px 18px;
     border-radius: 19px;

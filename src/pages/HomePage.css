@@ -451,6 +451,9 @@
     width: calc(100% - 28px) !important;
     max-width: calc(100% - 28px);
     overflow: visible;
+    background: rgba(18, 17, 22, 0.48) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(135%);
+    backdrop-filter: blur(16px) saturate(135%);
   }
 
   .glass-nav {
@@ -557,12 +560,20 @@
 }
 
 @media (max-width: 520px) {
+  .nav-glass {
+    top: 8px;
+    width: calc(100% - 20px) !important;
+    max-width: calc(100% - 20px);
+    height: 60px !important;
+    border-radius: 30px !important;
+  }
+
   .nav-brand {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .glass-nav {
-    padding: 0 13px;
+    padding: 0 11px;
   }
 
   .nav-actions {
@@ -570,8 +581,37 @@
   }
 
   .contact-button {
-    padding: 10px 13px;
-    font-size: 9px;
+    padding: 8px 10px;
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-menu-toggle span {
+    width: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-glass {
+    height: 56px !important;
+  }
+
+  .glass-nav {
+    padding: 0 9px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .contact-button {
+    padding: 7px 8px;
+    font-size: 7px;
   }
 }
 
