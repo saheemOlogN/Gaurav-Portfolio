@@ -1,0 +1,166 @@
+.certifications-section {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  padding: clamp(88px, 12vw, 150px) 24px 110px;
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.025), transparent 45%);
+  color: #f5f2f7;
+  scroll-margin-top: 100px;
+}
+
+.certifications-content {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.certifications-title {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.certifications-intro {
+  margin: 0 auto 46px;
+  color: rgba(245, 242, 247, 0.58);
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.certification-carousel {
+  display: grid;
+  width: min(100%, 1160px);
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
+  align-items: center;
+  gap: clamp(10px, 2vw, 22px);
+  margin: 0 auto;
+}
+
+.certification-viewport {
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 2%, #000 98%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 2%, #000 98%, transparent);
+}
+
+.certification-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  will-change: transform;
+}
+
+.certification-track.is-animating {
+  transition: transform 520ms cubic-bezier(0.22, 0.68, 0, 1);
+}
+
+.certification-card {
+  position: relative;
+  display: flex;
+  flex: 0 0 clamp(220px, calc((100vw - 210px) / 3), 350px);
+  min-height: 272px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.022));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 20px 52px rgba(0, 0, 0, 0.19);
+  backdrop-filter: blur(20px) saturate(125%);
+  text-align: center;
+}
+
+.certification-card h3 {
+  max-width: 280px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 450;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.certification-id {
+  margin-top: 16px;
+  color: rgba(245, 242, 247, 0.52);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.certification-arrow {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.055);
+  color: #fff;
+  font: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.certification-arrow:hover,
+.certification-arrow:focus-visible {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  outline: none;
+}
+
+.certification-arrow:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+@media (max-width: 600px) {
+  .certifications-section {
+    padding: 88px 20px 72px;
+  }
+
+  .certifications-title {
+    margin-bottom: 14px;
+  }
+
+  .certifications-intro {
+    margin-bottom: 42px;
+  }
+
+  .certification-carousel {
+    width: 100%;
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 8px;
+  }
+
+  .certification-track {
+    gap: 12px;
+  }
+
+  .certification-card {
+    flex-basis: min(78vw, 330px);
+    min-height: 240px;
+    padding: 28px 18px;
+    border-radius: 19px;
+  }
+
+  .certification-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certification-track.is-animating { transition: none; }
+  .certification-arrow { transition: none; }
+}
