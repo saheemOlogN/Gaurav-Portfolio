@@ -451,9 +451,6 @@
     width: calc(100% - 28px) !important;
     max-width: calc(100% - 28px);
     overflow: visible;
-    background: rgba(18, 17, 22, 0.48) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(135%);
-    backdrop-filter: blur(16px) saturate(135%);
   }
 
   .glass-nav {
