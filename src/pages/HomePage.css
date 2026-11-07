@@ -5,7 +5,7 @@
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(ellipse at 76% 53%, rgba(89, 255, 189, 0.09), transparent 26%),
+    radial-gradient(ellipse at 76% 53%, rgba(0, 212, 255, 0.09), transparent 26%),
     radial-gradient(ellipse at 15% 8%, rgba(166, 76, 255, 0.1), transparent 34%);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .nav-brand span {
-  color: #c4ff3a;
+  color: #00D4FF;
 }
 
 .nav-links {
@@ -112,9 +112,9 @@
   align-items: center;
   justify-content: center;
   padding: 12px 23px;
-  border: 1px solid rgba(205, 255, 78, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.8);
   border-radius: 999px;
-  background: #c4ff3a;
+  background: #00D4FF;
   color: #10110c;
   font-size: 12px;
   font-weight: 750;
@@ -128,7 +128,7 @@
 
 .contact-button:hover,
 .contact-button:focus-visible {
-  box-shadow: 0 0 28px rgba(196, 255, 58, 0.34);
+  box-shadow: 0 0 28px rgba(0, 212, 255, 0.34);
   outline: none;
   transform: translateY(-1px);
 }
@@ -159,16 +159,16 @@
 
 .intro-copy h1 {
   margin: 4px 0 29px -7px;
-  color: #c9ff37;
+  color: #00D4FF;
   font-size: clamp(82px, 9vw, 132px);
   font-weight: 850;
   letter-spacing: -0.09em;
   line-height: 0.92;
-  text-shadow: 0 0 34px rgba(201, 255, 55, 0.16);
+  text-shadow: 0 0 34px rgba(0, 212, 255, 0.16);
 }
 
 .name-dot {
-  color: #c9ff37;
+  color: #00D4FF;
 }
 
 .role-line {
@@ -183,10 +183,10 @@
 }
 
 .typed-role {
-  color: #c9ff37;
+  color: #00D4FF;
   white-space: nowrap;
   font-weight: 750;
-  text-shadow: 0 0 25px rgba(201, 255, 55, 0.2);
+  text-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
 }
 
 .intro-note {
@@ -213,7 +213,7 @@
   gap: 19px;
   min-height: 56px;
   padding: 0 23px;
-  border: 1px solid #c9ff37;
+  border: 1px solid #00D4FF;
   border-radius: 2px;
   font-size: 12px;
   font-weight: 700;
@@ -226,8 +226,8 @@
 }
 
 .hero-cta {
-  background: #c9ff37;
-  box-shadow: 0 0 28px rgba(201, 255, 55, 0.12);
+  background: #00D4FF;
+  box-shadow: 0 0 28px rgba(0, 212, 255, 0.12);
   color: #12140e;
 }
 
@@ -248,7 +248,7 @@
 .hero-cta:focus-visible,
 .about-link:hover,
 .about-link:focus-visible {
-  box-shadow: 0 0 32px rgba(201, 255, 55, 0.24);
+  box-shadow: 0 0 32px rgba(0, 212, 255, 0.24);
   outline: none;
   transform: translateY(-2px);
 }
@@ -306,7 +306,7 @@
 
 .contact-dialog-eyebrow {
   margin: 0 0 10px;
-  color: #c9ff37;
+  color: #00D4FF;
   font-size: 10px;
   font-weight: 550;
   letter-spacing: 0.16em;
@@ -367,8 +367,8 @@
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: rgba(201, 255, 55, 0.72);
-  box-shadow: 0 0 0 3px rgba(201, 255, 55, 0.1);
+  border-color: rgba(0, 212, 255, 0.72);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
 }
 
 .contact-form input::placeholder,
@@ -388,9 +388,9 @@
   justify-content: space-between;
   margin-top: 3px;
   padding: 0 18px;
-  border: 1px solid #c9ff37;
+  border: 1px solid #00D4FF;
   border-radius: 12px;
-  background: #c9ff37;
+  background: #00D4FF;
   color: #12140e;
   font: inherit;
   font-size: 12px;
@@ -411,13 +411,13 @@
   justify-self: end;
   overflow: hidden;
   place-items: center;
-  border: 1px solid rgba(201, 255, 55, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 45%, rgba(201, 255, 55, 0.06), rgba(20, 18, 24, 0.12) 68%);
+  background: radial-gradient(circle at 50% 45%, rgba(0, 212, 255, 0.06), rgba(20, 18, 24, 0.12) 68%);
   box-shadow:
-    0 0 0 1px rgba(201, 255, 55, 0.07),
+    0 0 0 1px rgba(0, 212, 255, 0.07),
     0 0 0 13px rgba(255, 255, 255, 0.018),
-    0 0 90px rgba(201, 255, 55, 0.06),
+    0 0 90px rgba(0, 212, 255, 0.06),
     0 28px 100px rgba(0, 0, 0, 0.36);
 }
 

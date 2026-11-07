@@ -5,7 +5,7 @@ import clientPhotos from 'virtual:client-items'
 import './ClientsSection.css'
 
 const placeholderArtwork = `data:image/svg+xml,${encodeURIComponent(
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480"><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#25232b"/><stop offset="1" stop-color="#111014"/></linearGradient></defs><rect width="720" height="480" fill="url(#g)"/><circle cx="360" cy="220" r="142" fill="none" stroke="#c9ff37" stroke-opacity=".18" stroke-width="2"/><circle cx="360" cy="220" r="105" fill="none" stroke="#c9ff37" stroke-opacity=".12"/><path d="M0 395 720 84M-20 470 690-15" stroke="#fff" stroke-opacity=".04" stroke-width="2"/></svg>'
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480"><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#25232b"/><stop offset="1" stop-color="#111014"/></linearGradient></defs><rect width="720" height="480" fill="url(#g)"/><circle cx="360" cy="220" r="142" fill="none" stroke="#00D4FF" stroke-opacity=".18" stroke-width="2"/><circle cx="360" cy="220" r="105" fill="none" stroke="#00D4FF" stroke-opacity=".12"/><path d="M0 395 720 84M-20 470 690-15" stroke="#fff" stroke-opacity=".04" stroke-width="2"/></svg>'
 )}`
 const placeholderClients = [0, 1, 2].map((index) => ({
   src: placeholderArtwork,

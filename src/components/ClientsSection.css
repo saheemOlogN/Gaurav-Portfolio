@@ -4,7 +4,7 @@
   min-height: 100svh;
   padding: clamp(88px, 12vw, 150px) 0 100px;
   border-top: 1px solid rgba(255, 255, 255, 0.065);
-  background: radial-gradient(ellipse at 50% 0%, rgba(201, 255, 55, 0.045), transparent 45%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.045), transparent 45%);
   color: #f5f2f7;
 }
 
@@ -130,11 +130,11 @@
 }
 
 .flex-carousel__subtitle {
-  color: #c9ff37;
+  color: #00D4FF;
 }
 
 .client-details-label {
-  color: #c9ff37;
+  color: #00D4FF;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -218,7 +218,7 @@
 
 .client-modal .client-subtitle {
   margin-top: 0;
-  color: #c9ff37;
+  color: #00D4FF;
   font-size: 13px;
   font-weight: 650;
 }

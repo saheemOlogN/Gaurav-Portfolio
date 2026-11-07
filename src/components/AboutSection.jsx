@@ -5,7 +5,7 @@ import carouselPhotos from 'virtual:carousel-items'
 import './AboutSection.css'
 
 const placeholderArtwork = `data:image/svg+xml,${encodeURIComponent(
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220"><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#26232c"/><stop offset="1" stop-color="#141318"/></linearGradient></defs><rect width="220" height="220" fill="url(#g)"/><circle cx="110" cy="110" r="68" fill="none" stroke="#c9ff37" stroke-opacity=".16"/><circle cx="110" cy="110" r="48" fill="none" stroke="#c9ff37" stroke-opacity=".1"/><path d="M0 170 220 45M-15 210 210-15" stroke="#fff" stroke-opacity=".035"/></svg>'
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220"><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#26232c"/><stop offset="1" stop-color="#141318"/></linearGradient></defs><rect width="220" height="220" fill="url(#g)"/><circle cx="110" cy="110" r="68" fill="none" stroke="#00D4FF" stroke-opacity=".16"/><circle cx="110" cy="110" r="48" fill="none" stroke="#00D4FF" stroke-opacity=".1"/><path d="M0 170 220 45M-15 210 210-15" stroke="#fff" stroke-opacity=".035"/></svg>'
 )}`
 const placeholderItems = [0, 1, 2].map((index) => ({
   src: placeholderArtwork,
